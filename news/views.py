@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from news.models import News
 
-# Create your views here.
+
+def index(request):
+    context = {"title": "Spot News", "news": News.objects.all()}
+    return render(request, "home.html", context)
