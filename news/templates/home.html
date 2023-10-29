@@ -1,3 +1,4 @@
+<!-- from news.views import news_details -->
 {% extends 'base.html' %}
 {% load static %}
 
@@ -7,18 +8,9 @@ Página Inicial
 {% endblock %}
 
 
-{% block header %}
-<nav class="nav">
-  <ul class="header-links">
-    <li>
-      <a href="{% url 'home-page' %}">Home</a>
-    </li>
-</nav>
-{% endblock %}
-
-
 {% block content %}
 {% for new in news %}
+<!-- <a href="{% url 'news_details' new.id %}"></a> -->
 <h2 class="news-title">{{new.title}}</h2>
 <span class="news-date">{{new.created_at|date:"SHORT_DATE_FORMAT"}}</span>
 {% if new.image %}

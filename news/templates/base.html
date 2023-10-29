@@ -6,13 +6,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>{% block title %} {% endblock %}</title>
 </head>
 
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 <header class="header">
-  {% block header %} {% endblock %}
+  <nav class="nav">
+    <ul class="header-links">
+      <li>
+        <a href="{% url 'home-page' %}">Home</a>
+      </li>
+  </nav>
+
 </header>
 
 <body>
