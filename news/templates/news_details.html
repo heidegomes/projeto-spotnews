@@ -9,7 +9,9 @@ Página de Detalhes da Notícia
 {% block content %}
 <h1 class="news-title">{{ new.title }}</h1>
 <p class="news-content">{{ new.content }}</p>
-<span class="news-categories">{{ new.categories }}</span>
+{% for categorie in new.categories.all %}
+<span class="news-categories">{{ categorie }}</span>
+{% endfor %}
 <span class="news-author">{{ new.author }}</span>
 <img src="{% static new.image.url %}" height="50">
 <span class="news-date">{{new.created_at|date:"SHORT_DATE_FORMAT"}}</span>
