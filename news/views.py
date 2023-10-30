@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from news.models import News
-from news.forms import CreateNewModelForm
+from news.models import News, Category
+from news.forms import CreateNewModelForm, CreateCategorieModelForm
 
 
 def index(request):
@@ -15,7 +15,12 @@ def new_details(request, id):
 
 
 def create_categories(request):
-    form = CreateNewModelForm()
+    form = CreateCategorieModelForm()
+    if request.method == "POST":
+        form = CreateCategorieModelForm(request.POST)
+        if form.is_valid():
+            Category.objects.create(**form.cleaned_data)
+            return redirect("home-page")
     context = {"form": form}
     return render(request, "categories_form.html", context)
 
