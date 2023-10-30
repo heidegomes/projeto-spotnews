@@ -14,6 +14,6 @@ Formulário para Nova Categoria
 <form method="post" action="{% url 'categories-form' %}" enctype="multipart/form-data">
   {% csrf_token %}
   {{form}}
-  <button type="submit" action="{% url 'home-page' %}">Salvar</button>
+  <button type="submit">Salvar</button>
 </form>
 {% endblock %}

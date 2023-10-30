@@ -28,9 +28,11 @@ def create_categories(request):
 def create_news(request):
     form = CreateNewModelForm()
     if request.method == "POST":
-        form = CreateNewModelForm(request.POST)
+        form = CreateNewModelForm(request.POST, request.FILES)
         if form.is_valid():
+            category = form.cleaned_data.pop("categories")
             News.objects.create(**form.cleaned_data)
+            News.objects.set(category)
             return redirect("home-page")
     context = {"form": form}
     return render(request, "news_form.html", context)

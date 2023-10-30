@@ -11,7 +11,7 @@ class CreateNewModelForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields["title"].label = "Título"
         self.fields["content"].label = "Conteúdo"
-        self.fields["content"].widget = forms.Textarea()
+        # self.fields["content"].widget = forms.Textarea()
         self.fields["author"].label = "Autoria"
         self.fields["author"].widget = forms.SelectMultiple()
         self.fields["author"].queryset = User.objects
@@ -20,7 +20,7 @@ class CreateNewModelForm(forms.ModelForm):
             attrs={"type": "date"}
         )
         self.fields["image"].label = "URL da imagem"
-        self.fields["image"].widget = forms.FileInput()
+        # self.fields["image"].widget = forms.FileInput()
         self.fields["categories"].widget = forms.CheckboxSelectMultiple()
         self.fields["categories"].queryset = Category.objects.all()
 
@@ -33,11 +33,3 @@ class CreateCategorieModelForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["name"].label = "Nome"
-        self.fields["name"].widget = forms.TextInput(
-            attrs={
-                "required": True,
-                "name": "name",
-                "maxlength": 200,
-                "type": "text",
-            }
-        )

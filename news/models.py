@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, blank=False, null=False)
 
     def __str__(self):
         return self.name

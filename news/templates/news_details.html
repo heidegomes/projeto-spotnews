@@ -13,6 +13,6 @@ Página de Detalhes da Notícia
 <span class="news-categories">{{ categorie }}</span>
 {% endfor %}
 <span class="news-author">{{ new.author }}</span>
-<img src="{% static new.image.url %}" height="50">
+<img src="{% static new.image.url %}" alt="{{ new.title }}" height="50">
 <span class="news-date">{{new.created_at|date:"SHORT_DATE_FORMAT"}}</span>
 {% endblock %}
