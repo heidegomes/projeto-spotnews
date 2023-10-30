@@ -5,6 +5,9 @@
 Página de Detalhes da Notícia
 {% endblock %}
 
+{% block link %}
+<a href="{% url 'home-page' %}">Home</a>
+{% endblock %}
 
 {% block content %}
 <h1 class="news-title">{{ new.title }}</h1>
