@@ -58,8 +58,8 @@ brew install mysql pkg-config
 
 <details>
 <summary><strong>Rodando a aplicação</strong></summary><br />
-python3 manage.py runserver
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py runscript seeds
+1. python3 manage.py runserver
+2. python3 manage.py makemigrations
+3. python3 manage.py migrate
+4. python3 manage.py runscript seeds
 </details>
