@@ -57,7 +57,29 @@ brew install mysql pkg-config
 </details>
 
 <details>
-<summary><strong>Rodando a aplicação</strong></summary><br />
+  <summary><strong>🏃🏾 Executando o Projeto</strong></summary>
+  As notícias estarão armazenadas no nosso banco de dados.
+
+  <strong>MySQL</strong>
+
+  Para a realização deste projeto, utilizaremos um banco de dados chamado `spotnews_database`.
+  Já existem algumas funções prontas no arquivo `news/scripts/seeds.py` que te auxiliarão no desenvolvimento.
+  Não altere as funções deste arquivo, mudanças nele não serão executadas no avaliador automático.
+
+  Para rodar o MySQL via Docker execute os seguintes comandos na raiz do projeto:
+
+  ```bash
+  docker build -t spotnews-db .
+  docker run -d -p 3306:3306 --name=spotnews-mysql-container -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=spotnews_database spotnews-db
+  ```
+  
+  Esses comandos irão fazer o build da imagem e subir o container
+  
+  Lembre-se de que o MySQL utiliza por padrão a porta 3306. Se já houver outro serviço utilizando esta porta, considere desativá-lo ou mudar a porta no comando acima.
+
+</details>
+
+<details>
   
 1. **python3 manage.py runserver**
   
