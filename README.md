@@ -10,6 +10,7 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 -->
 
 <details>
+  <summary><strong>Dependências Necessárias</strong></summary><br />
 1. Este projeto usa dependências que não são funcionais em todas as versões do Python. Por isso, recomendamos que seu Python esteja na versão `3.10.0` ou superior. Você pode usar o `Pyenv`, basta seguir nosso tutorial sobre [instalação e uso do Pyenv](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/f04cdb21-382e-4588-8950-3b1a29afd2dd/section/aa76abc8-b842-40d9-b5cc-baa960952129/lesson/0fe67ea0-1046-4b55-a37c-44afcfa9ed0a).
   
 > ⚠️ **ATENÇÃO: NUNCA REMOVA VERSÕES ANTIGAS INSTALADAS DO PYTHON. SEU SISTEMA OPERACIONAL PODE DEPENDER DELAS!** ⚠️
@@ -55,8 +56,10 @@ brew install mysql pkg-config
   O arquivo `dev-requirements.txt` contém todas as dependências que serão utilizadas no projeto, ele está agindo como se fosse um `package.json` de um projeto `Node.js`.
 </details>
 
-
+<details>
+<summary><strong>Rodando a aplicação</strong></summary><br />
 python3 manage.py runserver
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runscript seeds
+</details>
