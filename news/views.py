@@ -29,10 +29,11 @@ def create_news(request):
     form = CreateNewModelForm()
     if request.method == "POST":
         form = CreateNewModelForm(request.POST, request.FILES)
+        print("##########", form.errors)
         if form.is_valid():
             category = form.cleaned_data.pop("categories")
-            News.objects.create(**form.cleaned_data)
-            News.objects.set(category)
+            data = News.objects.create(**form.cleaned_data)
+            data.categories.set(category)
             return redirect("home-page")
     context = {"form": form}
     return render(request, "news_form.html", context)
