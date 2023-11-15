@@ -86,5 +86,3 @@ brew install mysql pkg-config
     python3 manage.py runscript seeds
    ```
    
-   
-</details>
