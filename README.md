@@ -71,21 +71,21 @@ python3 -m pip install -r dev-requirements.txt
 
 7. Entre no diretório do projeto e rode o serviço com o comando:
 
-    ```bash
-    python3 manage.py runserver
-    ```
+  ```bash
+  python3 manage.py runserver
+  ```
     
 8. Crie as migrações:
    
-    ```bash
-    python3 manage.py makemigrations
-    ```
+  ```bash
+  python3 manage.py makemigrations
+  ```
 
 9. Crie as tabelas no banco:
     
-   ```bash
-    python3 manage.py migrate
-   ```
+ ```bash
+  python3 manage.py migrate
+ ```
    
 11. Popule o banco
     
