@@ -31,6 +31,7 @@ brew install mysql pkg-config
 ```
 </details>
 
+## Instalação do projeto
 
 1. Primeiro abra o terminal e crie um diretório com o comando <strong>mkdir</strong>:
 ``` 
