@@ -39,27 +39,28 @@ brew install mysql pkg-config
 
 2. Entre no diretório que acabou de criar e clone o projeto:
 ``` 
- cd projetos
- git clone git@github.com:tryber/sd-028-b-trybe-futebol-clube.git
+cd projetos
+git clone git@github.com:tryber/sd-028-b-trybe-futebol-clube.git
 ```
 
-  3. **criar o ambiente virtual**
+3. Criar o ambiente virtual
 
-  ```bash
-  python3 -m venv .venv
-  ```
+```bash
+python3 -m venv .venv
+```
 
-  4. **ativar o ambiente virtual**
+4. Ativar o ambiente virtual
 
-  ```bash
-  source .venv/bin/activate
-  ```
+```bash
+source .venv/bin/activate
+```
 
- 5. **instalar as dependências no ambiente virtual**
+5. Instale as dependências no ambiente virtual
 
-  ```bash
-  python3 -m pip install -r dev-requirements.txt
-  ```
+```bash
+python3 -m pip install -r dev-requirements.txt
+```
+
 6.Para rodar o MySQL via Docker execute os seguintes comandos na raiz do projeto:
 
   ```bash
@@ -72,16 +73,21 @@ brew install mysql pkg-config
     ```bash
     python3 manage.py runserver
     ```
+    
 8. Crie as migrações:
+   
     ```bash
     python3 manage.py makemigrations
     ```
 
 9. Crie as tabelas no banco:
+    
    ```bash
     python3 manage.py migrate
    ```
-10. Popule o banco
+   
+11. Popule o banco
+    
    ```bash
     python3 manage.py runscript seeds
    ```
